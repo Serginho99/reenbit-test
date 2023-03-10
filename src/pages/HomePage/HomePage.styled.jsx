@@ -20,6 +20,7 @@ export const SearchInput = styled.input`
   height: 56px;
   border-radius: 8px;
   border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 0;
   padding-left: 48px;
   transition: filter 250ms;
   :hover,
@@ -51,4 +52,5 @@ export const SearchBtn = styled.button`
 export const Wrapper = styled.div`
   position: relative;
   width: 100%;
+  display: flex;
 `;

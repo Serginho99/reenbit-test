@@ -1,6 +1,7 @@
 import { BgImg, SearchInput, SearchBtn, Wrapper } from "./HomePage.styled";
 import Container from "../../components/Container/Container";
 import { AiOutlineSearch } from "react-icons/ai";
+import CharacterList from "../../components/CharacterList/CharacterList";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
           <SearchInput type="text" placeholder="Filter by name..." />
         </Wrapper>
       </form>
+      <CharacterList />
     </Container>
   );
 }
