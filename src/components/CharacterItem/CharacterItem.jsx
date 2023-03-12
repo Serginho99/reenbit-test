@@ -7,11 +7,11 @@ import {
   CharacterText,
 } from "./CharacterItem.styled";
 
-export default function CharacterItem({ img, name, species, id, location }) {
-  // const locationBack = useLocation();
+export default function CharacterItem({ img, name, species, id }) {
+  const location = useLocation();
   return (
     <CharacterItemStyled>
-      <Link state={{ from: location }} to={`/${id}`}>
+      <Link to={`characterInfo/${id}`} state={{ from: location }}>
         <CharacterImg loading="lazy" src={img} alt={name} />
         <WrapperInfo>
           <CharacterTitle>{name}</CharacterTitle>

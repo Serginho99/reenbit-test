@@ -1,9 +1,7 @@
-import { useLocation } from "react-router-dom";
 import CharacterItem from "../CharacterItem/CharacterItem";
 import { CharacterListStyled, HelperText } from "./CharacterList.styled";
 
 export default function CharacterList({ characters }) {
-  const location = useLocation();
   return (
     <>
       {characters.length === 0 ? (
@@ -18,7 +16,6 @@ export default function CharacterList({ characters }) {
                 name={name}
                 species={species}
                 id={id}
-                location={location}
               />
             ))
             .sort((a, b) => a.props.name.localeCompare(b.props.name))}
