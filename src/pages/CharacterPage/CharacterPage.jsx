@@ -24,18 +24,19 @@ export default function CharacterPage() {
   useEffect(() => {
     async function fetchCharacterById() {
       setIsLoading(true);
-
       try {
         const res = await getCharacterById(id);
         setCharacterInfo({ ...res });
-        // return res;
+        return res;
       } catch (error) {
         console.log(error.message);
       } finally {
         setIsLoading(false);
       }
     }
-    fetchCharacterById();
+    if (characterInfo) {
+      fetchCharacterById();
+    }
   }, [id]);
 
   const { image, name, gender, status, species, origin, type } = characterInfo;
