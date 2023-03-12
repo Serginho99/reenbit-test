@@ -8,7 +8,8 @@ export const CharacterItemStyled = styled.li`
   & + & {
     margin-top: 32px;
   }
-  height: 308px;
+  height: auto;
+  width: 310px;
 
   @media screen and (min-width: 1200px) {
     overflow: hidden;

@@ -81,6 +81,8 @@ export const InfoOfCharacter = styled.p`
 export const ListInfoCharacter = styled.ul`
   margin: 16px 32px 85px 24px;
   padding-left: 16px;
+  width: 310px;
+
   @media screen and (min-width: 1200px) {
     display: block;
     margin-left: auto;

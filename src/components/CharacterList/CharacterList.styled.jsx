@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const CharacterListStyled = styled.ul`
-  margin-top: 32px;
+  display: block;
+  margin: 32px auto 0px auto;
+  width: 310px;
 
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -9,6 +11,7 @@ export const CharacterListStyled = styled.ul`
     justify-content: center;
     gap: 24px 20px;
     margin-top: 61px;
+    width: 100%;
   }
 `;
 

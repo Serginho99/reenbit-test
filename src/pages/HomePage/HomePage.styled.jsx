@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const BgImg = styled.img`
   display: block;
-  width: 100%;
+  width: 310px;
   height: 104px;
+  margin: 0 auto;
   margin-bottom: 32px;
   @media screen and (min-width: 1200px) {
     width: 600px;
@@ -14,17 +15,21 @@ export const BgImg = styled.img`
 `;
 
 export const SearchInput = styled.input`
-  width: 100%;
   height: 56px;
   border-radius: 8px;
   border: 2px solid rgba(0, 0, 0, 0.5);
   padding: 0;
   padding-left: 48px;
   transition: filter 250ms;
+  width: 100%;
   :hover,
   :focus {
     outline: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 100%;
+    width: 100%;
   }
 `;
 
@@ -49,6 +54,11 @@ export const SearchBtn = styled.button`
 
 export const Wrapper = styled.div`
   position: relative;
-  width: 100%;
-  display: flex;
+  width: 310px;
+  text-align: center;
+  margin: 0 auto;
+  @media screen and (min-width: 1200px) {
+    /* max-width: 100%; */
+    width: 100%;
+  }
 `;
