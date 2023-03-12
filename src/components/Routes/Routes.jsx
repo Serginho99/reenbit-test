@@ -7,7 +7,7 @@ export default function RoutesPages() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/characterInfo/:id" element={<CharacterPage />} />
+        <Route path="/character/:id" element={<CharacterPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>

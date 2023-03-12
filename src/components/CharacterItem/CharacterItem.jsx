@@ -11,7 +11,7 @@ export default function CharacterItem({ img, name, species, id }) {
   const location = useLocation();
   return (
     <CharacterItemStyled>
-      <Link to={`characterInfo/${id}`} state={{ from: location }}>
+      <Link to={`character/${id}`} state={{ from: location }}>
         <CharacterImg loading="lazy" src={img} alt={name} />
         <WrapperInfo>
           <CharacterTitle>{name}</CharacterTitle>
