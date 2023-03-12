@@ -1,17 +1,15 @@
 import styled from "styled-components";
-import titleImg from "../../images/title.png";
 
-export const BgImg = styled.div`
-  background-image: url(${titleImg});
-  width: 600px;
-  height: 200px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
-  transition: filter 250ms;
-  margin: 86px auto 16px auto;
-  :hover {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+export const BgImg = styled.img`
+  display: block;
+  width: 100%;
+  height: 104px;
+  margin-bottom: 32px;
+  @media screen and (min-width: 1200px) {
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 16px;
   }
 `;
 

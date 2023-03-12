@@ -1,12 +1,12 @@
 import styled, { keyframes } from "styled-components";
 
 export const LoaderBackdrop = styled.div`
-  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 100;
   transition: 0.6s;
+  min-height: 100vh;
 `;
 
 const rotation = keyframes`

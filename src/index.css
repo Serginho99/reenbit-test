@@ -7,6 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-width: 100vw;
   min-height: 100vh;
+  display: flex;
+}
+
+[id="root"] {
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 h1,
@@ -21,4 +27,11 @@ p {
 
 ul {
   padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
