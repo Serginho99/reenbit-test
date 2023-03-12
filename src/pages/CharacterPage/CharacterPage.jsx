@@ -27,7 +27,10 @@ export default function CharacterPage() {
 
       try {
         const res = await getCharacterById(id);
-        setCharacterInfo(res);
+        if (!res) {
+          return;
+        }
+        setCharacterInfo({ ...res });
         return res;
       } catch (error) {
         console.log(error.message);
