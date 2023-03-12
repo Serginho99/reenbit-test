@@ -16,14 +16,15 @@ import {
   Wrapper,
 } from "./CharacterPage.styled";
 
-export default function UserInfoPage() {
+export default function CharacterPage() {
   const { id } = useParams();
   const [characterInfo, setCharacterInfo] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
     async function fetchCharacterById() {
+      setIsLoading(true);
+
       try {
         const res = await getCharacterById(id);
         setCharacterInfo({ ...res });
@@ -35,7 +36,7 @@ export default function UserInfoPage() {
       }
     }
     fetchCharacterById();
-  }, []);
+  }, [id]);
 
   const { image, name, gender, status, species, origin, type } = characterInfo;
 

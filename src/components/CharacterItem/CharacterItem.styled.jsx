@@ -13,7 +13,7 @@ export const CharacterItemStyled = styled.li`
 
   @media screen and (min-width: 1200px) {
     overflow: hidden;
-    width: calc((100% - 155px) / 4);
+    width: 240px;
     height: auto;
     & + & {
       margin-top: 0;

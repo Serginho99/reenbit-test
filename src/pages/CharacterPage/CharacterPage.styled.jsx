@@ -120,6 +120,7 @@ export const Wrapper = styled.div`
   width: 360px;
   margin: 0 auto;
   @media screen and (min-width: 1200px) {
+    max-width: 1440px;
     width: 100%;
   }
 `;
