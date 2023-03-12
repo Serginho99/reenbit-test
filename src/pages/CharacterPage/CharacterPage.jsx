@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { getCharacterById } from "../../services/apiServices";
 import Loader from "../../components/Loader/Loader";
 
@@ -20,6 +20,7 @@ export default function CharacterPage() {
   const { id } = useParams();
   const [characterInfo, setCharacterInfo] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     async function fetchCharacterById() {
@@ -39,7 +40,13 @@ export default function CharacterPage() {
     }
   }, [id]);
 
+  if (!characterInfo) {
+    return;
+  }
+
   const { image, name, gender, status, species, origin, type } = characterInfo;
+
+  const backLink = location.state?.from ?? "/";
 
   return (
     <>
@@ -48,7 +55,7 @@ export default function CharacterPage() {
       ) : (
         <Wrapper>
           {" "}
-          <LinkBack to="/">
+          <LinkBack to={backLink}>
             <SvgBack />
             GO BACK
           </LinkBack>
