@@ -13,6 +13,7 @@ import {
   Title,
   Text,
   SvgBack,
+  Wrapper,
 } from "./CharacterPage.styled";
 
 export default function UserInfoPage() {
@@ -43,7 +44,7 @@ export default function UserInfoPage() {
       {isLoading ? (
         <Loader />
       ) : (
-        <>
+        <Wrapper>
           {" "}
           <LinkBack to="/">
             <SvgBack />
@@ -74,7 +75,7 @@ export default function UserInfoPage() {
               <Text>{type ? type : "Unknown"}</Text>
             </ItemListCharacter>
           </ListInfoCharacter>
-        </>
+        </Wrapper>
       )}
     </>
   );
