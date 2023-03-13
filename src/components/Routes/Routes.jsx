@@ -1,15 +1,22 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import HomePage from "../../pages/HomePage/HomePage";
-import CharacterPage from "../../pages/CharacterPage/CharacterPage";
+import { lazy, Suspense } from "react";
+import Loader from "../Loader/Loader";
+
+const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
+const CharacterPage = lazy(() =>
+  import("../../pages/CharacterPage/CharacterPage")
+);
 
 export default function RoutesPages() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/character/:id" element={<CharacterPage />} />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/character/:id" element={<CharacterPage />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }
